@@ -1,0 +1,33 @@
+
+*{
+    /*background-color: #000;
+    */color: #fff!important;
+}
+html{
+    scroll-behavior: smooth;
+}
+#navbar-button{
+    font-size: 35px;
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline:none;
+    position: fixed;
+}
+#navbar{
+    animation:animateleft 1.4s;
+    display: none;
+    position:relative;
+    height:100%;
+    width:200px;
+    position:fixed!important;
+    z-index:1;
+    overflow:auto;
+    box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+    @keyframes animateleft{
+        from{left:-300px;opacity:0}
+        to{left:0;opacity:1}
+    }
+}
