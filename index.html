@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CV page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!--Barra de navegacion-->
+    <button id="navbar-button" onclick="onOpen()">&#9776;</button>
+    <div id="navbar" style="background-color: green;">
+        <div>
+        <p>Y esto?</p>
+        </div>
+    </div>
+
+    <!--Contenido general de la pagina-->
+    <div id="content">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere id optio corporis quae aliquam non dolor fugiat. Quia assumenda autem est sint minima nihil itaque labore magni, odit praesentium porro.</p>
+    </div>
+
+    <!--Expansion de la barra de navegacion-->
+    <script>
+        function onOpen(){
+        document.getElementById("navbar").style.width = "20%";
+        document.getElementById("navbar").style.display="block;";
+        document.getElementById("navbar-button").style.marginLeft="220px";
+        }
+    </script>
+</body>
+</html>
