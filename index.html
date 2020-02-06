@@ -1,33 +1,164 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>CV page</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Personal Page</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
     <link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
-    <!--Barra de navegacion-->
-    <button id="navbar-button" onclick="onOpen()">&#9776;</button>
-    <div id="navbar" style="background-color: green;">
-        <div>
-        <p>Y esto?</p>
+    <div class="myContainer" data-spy="scroll" data-target="#references">
+        <nav id="sidebar">
+            <div style="padding: 20px;">
+                <!--Sidebar header: left corner-->
+                <h3>Anderson B<span>arragan</span></h3>
+            </div>
+            <ul id="references" class="components list-unstyled" style="text-align: center;">
+                <p>Content</p>
+                <div class="line"></div>
+                <li><a href="#about-me">About me</a></li>
+                <li>
+                    <a href="#Submenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Projects</a>
+                    <ul class="collapse list-unstyled" id="Submenu">
+                        <li><a href="#streaming">Streaming</a></li>
+                        <li><a href="#spiel">Socialnet</a></li>
+                        <li><a href="#web">Webdesign</a></li>
+                    </ul>
+                </li>
+                <li><a href="#hobbies">Hobbies</a></li>
+                <li><a href="#experience">Experience</a></li>
+            </ul>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content">
+            <!--Navbar-->
+            <nav class="navbar navbar-expand-lg">
+                <div class="container-fluid">
+                    <button type="button" id="collapse-btn" class="btn btn-dark">
+                        <span>Menu</span>
+                        <div id="anti-span">☰</div>
+                    </button>
+                    <div style="text-align: center; padding-left: 40%;">
+                        <img src="https://uniandes.edu.co/sites/default/files/logo-header_0_0.png" alt="logo uniandes"
+                            class="rounded">
+                    </div>
+                    <!--Boton de navbar superior-->
+                    <button id="collapse-nav" class="btn btn-dark d-inline-block d-lg-none " type="button"
+                        data-toggle="collapse" data-target="#nav-elements" aria-controls="nav-elements"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <div style="width: 35px; padding: 0px; background-color: rgb(0, 0, 0, 0);">
+                            Social</div>
+                    </button>
+                    <!--navbar content-->
+                    <div class="collapse navbar-collapse" id="nav-elements">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" target="_blank" href="https://gmail.com"
+                                    style="display: inline-block;"><img src="search.png" alt="G">
+                                </a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Gmail</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+            <!--Content start-->
+            <div>
+                <div id="about-me" class="jumbotron" style="background-color: #101010;">
+                    <h1>About me</h1>
+                    <p>I'm studying in Andes University, currently in 7th semester and expect to graduate on december
+                        2020. <br>
+                        I've developed some projects in severals and diverse fields including Databases, Web design, and
+                        take part of some activities such as Competitive programming and data science. </p>
+                </div>
+            </div>
+
+            <div class="container">
+                <h2>Some projects ...</h2>
+                <div class="row">
+                    <div id="streaming" class="col-12 col-md-6 col-lg-6">
+                        <div class="media border p-3 my-card">
+                            <img  class="align-self-center rounded" src="https://blog.trello.com/hs-fs/hubfs/2017-09-06_Summit2017_TrelloForDesktop_r02.png?width=647&name=2017-09-06_Summit2017_TrelloForDesktop_r02.png" alt="Image desktop app">
+                            <h4>Desktop<small><br><i>Streaming server</i></small></h4>
+                            <p>UDP and TCP servers for playing videos on internet by streaming</p>
+                        </div>
+                    </div>
+                    <div id="spiel" class="col-12 col-md-6 col-lg-6">
+                        <div class="media border p-3 my-card">
+                            <h4>Spiel </h4>
+                            <p>Social network for playing soccer.</p>
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=Ls_dxo6vNTc"></iframe>
+                                  </div>
+                        </div>
+                    </div>
+                    <div id="web" class="col-12 col-md-12 col-lg-12">
+                        <div class="media border p-3 my-card">
+                            <h4>Personal page </h4>
+                            <p>Personal page as a learning project of css, bootstrap and html</p>
+                            <a onclick="playAudio()" href="#about-me"> <h1 style="color: royalblue!important;">My page </h1></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="hobbies" style="margin-top: 30px;">
+                <h2>Hobbies</h2>
+                <p>Some of my hobbies are playing music, drawing, reading, and several other skills. On the other hand, I like research about trending topics in computer science, develop personal projects for practice my skills and reading about the themes that I'm taking in the University</p>
+            </div>
+            <div class="line"></div>
+            <div id="experience">
+                <h2>Academy and jobs</h2>
+                <p>I'm waiting to have my bachelor in systems engineering at the end of 2020. Therefore, virtual courses in coursera complement my professional timeline</p>
+            </div>
+            <div class="line"></div>
+            <br><br><br>
+            <div id="footer">
+                <pre>
+                        All rights reserved
+                    author: Anderson Barragan
+                    references: w3schools.com
+                                freepick.com
+                                flaticon.com
+                </pre>              
+            </div>
         </div>
     </div>
 
-    <!--Contenido general de la pagina-->
-    <div id="content">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facere id optio corporis quae aliquam non dolor fugiat. Quia assumenda autem est sint minima nihil itaque labore magni, odit praesentium porro.</p>
-    </div>
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+    <!-- jQuery Custom Scroller CDN -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+<script>
+var x = document.getElementById("myAudio"); 
 
-    <!--Expansion de la barra de navegacion-->
-    <script>
-        function onOpen(){
-        document.getElementById("navbar").style.width = "20%";
-        document.getElementById("navbar").style.display="block;";
-        document.getElementById("navbar-button").style.marginLeft="220px";
-        }
+function playAudio() { 
+  x.play(); 
+} 
+</script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#collapse-btn').on('click', function () {
+                $('#sidebar, #content').toggleClass('active');
+            });
+        });
     </script>
 </body>
+
 </html>
