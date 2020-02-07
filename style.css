@@ -1,6 +1,6 @@
 /*General page background and font color*/
 *{
-    background-color: #222222;
+    background-color: #222222; /*Opinion personal: Los colores en general son muy oscuros y resulta un poco dificil de ver la pagina. */
     color: #fff !important;
     transition-duration: 0.5s;
 }
